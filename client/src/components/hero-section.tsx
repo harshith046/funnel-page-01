@@ -39,7 +39,7 @@ export default function HeroSection() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="text-center z-10 px-4"
+        className="text-left max-w-6xl mx-auto z-10 px-4"
       >
         <motion.h1
           variants={itemVariants}
@@ -59,7 +59,7 @@ export default function HeroSection() {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-4 justify-start items-start"
         >
           <Button
             onClick={openSignup}
@@ -80,7 +80,7 @@ export default function HeroSection() {
 
         <motion.div
           variants={itemVariants}
-          className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto"
+          className="grid grid-cols-3 gap-8 mt-16 max-w-2xl"
         >
           <motion.div
             className="text-center"
