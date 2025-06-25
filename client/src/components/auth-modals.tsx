@@ -186,8 +186,8 @@ export default function AuthModals() {
                     <Checkbox
                       id="remember"
                       checked={loginForm.remember}
-                      onCheckedChange={(checked) => 
-                        setLoginForm({...loginForm, remember: checked as boolean})
+                      onCheckedChange={(checked: boolean | "indeterminate") => 
+                        setSignupForm({ ...signupForm, terms: checked === true })
                       }
                     />
                     <Label htmlFor="remember" className="text-sm text-gray-300">
@@ -318,8 +318,8 @@ export default function AuthModals() {
                   <Checkbox
                     id="terms"
                     checked={signupForm.terms}
-                    onCheckedChange={(checked) => 
-                      setSignupForm({...signupForm, terms: checked as boolean})
+                    onCheckedChange={(checked: boolean | "indeterminate") => 
+                      setSignupForm({ ...signupForm, terms: checked === true })
                     }
                     required
                   />
